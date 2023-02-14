@@ -78,7 +78,7 @@ const Home = ({ data }) => {
 export async function getStaticProps () {
   // const response = await fetch('https://swapi.dev/api/films/')
   // const data = await response.json()
-  return { props: { data: [{name: new Date().toString()}] } }
+  return { props: { data: [{name: new Date().toString()}] }, fallback: 'blocking' }
 }
 
 export default Home
