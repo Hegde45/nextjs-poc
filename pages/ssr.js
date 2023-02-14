@@ -15,7 +15,7 @@ const Home = ({ data }) => {
 }
 
 async function api() {
-  await fetch('http://localhost:3000/api/hello', {mode:'cors'});
+  await fetch('/api/hello', {mode:'cors'});
 }
 
 export async function getServerSideProps (req, res) {
