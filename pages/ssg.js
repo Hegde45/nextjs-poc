@@ -78,7 +78,6 @@ const Home = ({ data }) => {
 export async function getStaticProps () {
   // const response = await fetch('https://swapi.dev/api/films/')
   // const data = await response.json()
-  await new Promise(f => setTimeout(f, Math.random()));
   return { props: { data: [{name: new Date().toString()}] } }
 }
 
