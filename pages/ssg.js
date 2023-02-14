@@ -78,7 +78,14 @@ const Home = ({ data }) => {
 export async function getStaticProps () {
   // const response = await fetch('https://swapi.dev/api/films/')
   // const data = await response.json()
-  return { props: { data: [{name: new Date().toString()}] }, fallback: true }
+  return { props: { data: [{name: new Date().toString()}] } }
+}
+
+// This function gets called at build time
+export async function getStaticPaths() {
+  return {
+    fallback: true,
+  }
 }
 
 export default Home
