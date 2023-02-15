@@ -81,11 +81,11 @@ export async function getStaticProps () {
   return { props: { data: [{name: new Date().toString()}] } }
 }
 
-// This function gets called at build time
-export async function getStaticPaths() {
-  return {
-    fallback: true,
-  }
-}
+// // This function gets called at build time
+// export async function getStaticPaths() {
+//   return {
+//     fallback: true,
+//   }
+// }
 
 export default Home
