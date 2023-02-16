@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Head from "next/head"
 
+export const config = { amp: true }
+
 const siteMetadata = {
   companyName: "Example",
   phoneNumber: "(xxx) xxx-xxxx",
@@ -75,7 +77,7 @@ const Home = ({ data }) => {
                 ogTwitterImage={siteMetadata.siteLogoSquare}
                 ogType={"website"}
             />
-      <h1>The Starwars films</h1>
+      <h1>The Starwars films / amp added</h1>
       {info}
       <ul>
         {data.map(item => (
