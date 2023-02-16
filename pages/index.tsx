@@ -32,7 +32,7 @@ export default function Home() {
           <Link href="/ssg">ssg Link tag</Link>
         </div>
         <div>
-          <Link href="/ssg">ssg Link tag prefetch false</Link>
+          <Link href="/ssg" prefetch={false}>ssg Link tag prefetch false</Link>
         </div>
         <div>
           <div onClick={navToSSG}>ssg (router.push)</div>
