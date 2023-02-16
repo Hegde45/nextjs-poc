@@ -77,7 +77,7 @@ const Home = ({ data }) => {
                 ogTwitterImage={siteMetadata.siteLogoSquare}
                 ogType={"website"}
             />
-      <h1>The Starwars films / amp added</h1>
+      <h1 onClick={alert('amp proof ;-)')}>The Starwars films / amp added</h1>
       {info}
       <ul>
         {data.map(item => (
