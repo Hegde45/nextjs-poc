@@ -61,9 +61,9 @@ const Home = ({ data }) => {
   const [isLoading, setLoading] = useState(false)
 
   const alertt = () => {
-    alert('amp proof ;-)');
+    alert('amp proof ALERTED ;-)');
   }
-  
+
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
