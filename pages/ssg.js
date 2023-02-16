@@ -78,7 +78,7 @@ const Home = ({ data }) => {
                 ogType={"website"}
             />
       <h1>The Starwars films</h1>
-      <h1 onClick={alert('amp proof ;-)')}>amp added</h1>
+      <h1 onClick={alert('amp proof ;-)')}>amp added test</h1>
       {info}
       <ul>
         {data.map(item => (
