@@ -68,7 +68,7 @@ const Home = ({ data }) => {
   return (
     <main>
       <HeadSeo
-                title={`dynamic title meta seo - ${data[0].name}`}
+                title={`dynamic title meta seo vercel app test`}
                 description={`Your description goes here on every page. 
                   Keep character count between 140 to 160 characters`}
                 canonicalUrl={siteMetadata.siteUrl}
