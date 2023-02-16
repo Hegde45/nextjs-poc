@@ -29,13 +29,13 @@ export default function Home() {
         </div>
         <br />
         <div>
-          <Link href="/ssg">ssg Link tag</Link>
+          {/* <Link href="/ssg">ssg Link tag</Link> */}
         </div>
         <div>
           <Link href="/ssg" prefetch={false}>ssg Link tag prefetch false</Link>
         </div>
         <div>
-          <div onClick={navToSSG}>ssg (router.push)</div>
+          {/* <div onClick={navToSSG}>ssg (router.push)</div> */}
         </div>
         <br />
         <div>
