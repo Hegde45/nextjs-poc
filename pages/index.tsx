@@ -29,8 +29,8 @@ export default function Home() {
         </div>
         <br />
         <div>
-          {/* <Link href="/ssg">ssg</Link> */}
-          <div onClick={navToSSG}>ssg</div>
+          <Link href="/ssg">ssg Link tag</Link>
+          <div onClick={navToSSG}>ssg (router.push)</div>
         </div>
         <br />
         <div>
