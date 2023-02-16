@@ -1,10 +1,20 @@
 import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
 import Link from 'next/link';
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const router = useRouter();
+  
+  const navToSSG = () => {
+    router.push('/ssg', undefined, {
+      unstable_skipClientCache: true
+    })
+
+  }
+
   return (
     <div>
       <h1 className="title">
@@ -19,7 +29,8 @@ export default function Home() {
         </div>
         <br />
         <div>
-          <Link href="/ssg">ssg</Link>
+          {/* <Link href="/ssg">ssg</Link> */}
+          <div onClick={navToSSG}>ssg</div>
         </div>
         <br />
         <div>

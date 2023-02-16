@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from "next/head"
 
 const siteMetadata = {
@@ -55,6 +55,16 @@ const HeadSeo = ({
 }
 
 const Home = ({ data }) => {
+  const [info, setInfo] = useState(null)
+  const [isLoading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setInfo(new Date().toISOString());
+      setLoading(false)
+    }, 4000);
+  }, [])
   return (
     <main>
       <HeadSeo
@@ -66,6 +76,7 @@ const Home = ({ data }) => {
                 ogType={"website"}
             />
       <h1>The Starwars films</h1>
+      {info}
       <ul>
         {data.map(item => (
           <li key={item.name}>{item.name}</li>
@@ -76,16 +87,7 @@ const Home = ({ data }) => {
 }
 
 export async function getStaticProps () {
-  // const response = await fetch('https://swapi.dev/api/films/')
-  // const data = await response.json()
   return { props: { data: [{name: new Date().toString()}] } }
 }
-
-// // This function gets called at build time
-// export async function getStaticPaths() {
-//   return {
-//     fallback: true,
-//   }
-// }
 
 export default Home
