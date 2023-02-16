@@ -60,6 +60,10 @@ const Home = ({ data }) => {
   const [info, setInfo] = useState(null)
   const [isLoading, setLoading] = useState(false)
 
+  const alertt = () => {
+    alert('amp proof ;-)');
+  }
+  
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
@@ -78,7 +82,7 @@ const Home = ({ data }) => {
                 ogType={"website"}
             />
       <h1>The Starwars films</h1>
-      <h1 onClick={alert('amp proof ;-)')}>amp added test</h1>
+      <h1 onClick={alertt}>amp added test</h1>
       {info}
       <ul>
         {data.map(item => (
